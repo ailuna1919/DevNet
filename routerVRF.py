@@ -1,1 +1,0 @@
-print ("Router confir VRF")
