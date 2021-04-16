@@ -23,3 +23,7 @@ Step 3: Run the pipenv install command to install the pip environment using the 
 The modules required by the application are defined in the Pipfile, and the pipenv install command installs them automatically in the environment.
 # Install the environment
 RUN pipenv install
+
+
+# Start the python application
+CMD pipenv run python3.7 myapp.py
