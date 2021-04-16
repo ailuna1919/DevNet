@@ -13,3 +13,13 @@ WORKDIR /app
 Step 5: Expose the port 8080 using the EXPOSE instruction.
 # Expose port 8080
 EXPOSE 8080
+
+# Install bind-tools
+RUN apk add bind-tools
+Step 2: The base image comes with Python preinstalled, but to run the application, pipenv is required. Use the RUN instruction to install pipenv with pip install.
+# Install pipenv
+RUN pip install pipenv
+Step 3: Run the pipenv install command to install the pip environment using the RUN instruction.
+The modules required by the application are defined in the Pipfile, and the pipenv install command installs them automatically in the environment.
+# Install the environment
+RUN pipenv install
