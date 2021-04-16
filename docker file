@@ -1,0 +1,15 @@
+Step 1: For the base image, use python with the tag alpine3.7 with the FROM instruction.
+# Use python:alpine3.7 for the base image
+FROM python:alpine3.7
+Step 2: Write the instruction to copy the Python files from the ./app directory to /app directory with the COPY instruction.
+# Copy the .py files in ./app from build's context to /app
+COPY ./app/*.py /app/
+Step 3: Write the instruction to copy the Pipfile from the ./app directory to /app directory with the COPY instruction.
+# Copy the Pipfile in ./app from build's context to /app
+COPY ./app/Pipfile /app/
+Step 4: Change the working directory to /app with the WORKDIR instruction.
+# Change the working directory to WORKDIR
+WORKDIR /app
+Step 5: Expose the port 8080 using the EXPOSE instruction.
+# Expose port 8080
+EXPOSE 8080
