@@ -1,0 +1,5 @@
+def sanitize_string(filename):
+    if re.search('^[\w\-\.]+$', filename):
+        pass
+    else:
+        raise ValueError('Can not use special characters')
